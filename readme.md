@@ -1,6 +1,8 @@
 Black and White 2 Tiger Unlocker
 ================================
 
+![Kitty Unlocker](screenshot.png)
+
 This program lets you unlock Tiger creature in Black and White 2.
 
 The original unlocker program that come with Collector Edition disk
