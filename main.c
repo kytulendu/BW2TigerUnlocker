@@ -193,7 +193,13 @@ LRESULT CALLBACK ButtonProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
                         return 0;
                     }
                     result = RegQueryValueEx(hNTRegKey, "ProductId", NULL, &dwType, (LPBYTE) buf, &bufSize);
-                    printf("%s",buf);
+                    /* in case it also not exist */
+                    if(result != ERROR_SUCCESS)
+                    {
+                        /* force empty string */
+                        buf[0] = '\0';
+                        bufSize = sizeof(BYTE);
+                    }
 
                     RegCloseKey(hNTRegKey);
                 }
